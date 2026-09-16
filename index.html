@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Al Hawiyah Camp · Wahiba Sands · Bidiyah</title>
-<meta name="description" content="Quiet luxury desert lodge near Wahiba Sands, Bidiyah. Air-conditioned rooms, balconies, sunrise dunes, and warm Omani hospitality. Enquire on WhatsApp.">
+<title>Al Hawiyah Camp · Bidiyah · Wahiba Sands</title>
+<meta name="description" content="A quiet desert lodge on the edge of Wahiba Sands, Bidiyah. Standalone chalets under desert sky, campfire evenings, and warm Omani hospitality. Enquire on WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
   --terracotta: #c45c3e;
@@ -19,6 +19,7 @@
   --brown-soft: #4a3228;
   --muted: #6b5548;
   --wa: #25D366;
+  --night: #1a0f0a;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -40,17 +41,22 @@ a { color: inherit; }
   font-size: 0.72rem;
   letter-spacing: 0.04em;
   text-align: center;
-  padding: 0.5rem 1rem;
+  padding: 0.55rem 1rem;
   position: sticky; top: 0; z-index: 100;
 }
 
 .nav {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 1rem 1.25rem; max-width: 1100px; margin: 0 auto;
+  padding: 1rem 1.25rem; max-width: 1120px; margin: 0 auto;
 }
-.nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; letter-spacing: 0.02em; }
-.nav-links { display: none; gap: 1.5rem; font-size: 0.85rem; font-weight: 500; }
-.nav-links a { text-decoration: none; opacity: 0.8; }
+.nav-brand {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.4rem;
+  letter-spacing: 0.03em; text-decoration: none;
+}
+.nav-brand span { display: block; font-family: 'Outfit', sans-serif; font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 0.15rem; font-weight: 500; }
+.nav-links { display: none; gap: 1.6rem; font-size: 0.85rem; font-weight: 500; }
+.nav-links a { text-decoration: none; opacity: 0.8; transition: opacity 0.15s; }
+.nav-links a:hover { opacity: 1; }
 .nav-toggle {
   background: none; border: 1px solid var(--sand); border-radius: 6px;
   padding: 0.4rem 0.7rem; font-size: 0.8rem; cursor: pointer; color: var(--brown);
@@ -60,192 +66,196 @@ a { color: inherit; }
   padding: 0 1.25rem 1.25rem; background: var(--cream);
 }
 .nav-mobile.open { display: flex; }
-.nav-mobile a { text-decoration: none; font-size: 0.95rem; padding: 0.4rem 0; border-bottom: 1px solid var(--sand); }
+.nav-mobile a { text-decoration: none; font-size: 0.95rem; padding: 0.45rem 0; border-bottom: 1px solid var(--sand); }
 
 .hero {
-  position: relative; min-height: 88vh;
+  position: relative; min-height: 92vh;
   display: flex; align-items: flex-end;
-  background: var(--brown) center/cover no-repeat;
+  background: var(--night) center/cover no-repeat;
   background-image:
-    linear-gradient(180deg, rgba(44,24,16,0.15) 0%, rgba(44,24,16,0.45) 45%, rgba(44,24,16,0.88) 100%),
-    url('images/01-exterior.jpg');
+    linear-gradient(180deg, rgba(26,15,10,0.2) 0%, rgba(26,15,10,0.35) 40%, rgba(26,15,10,0.92) 100%),
+    url('images-ig/01.jpg');
   color: var(--cream);
-  padding: 2.5rem 1.25rem 3.5rem;
+  padding: 2.5rem 1.25rem 3.75rem;
 }
-.hero-inner { max-width: 640px; }
+.hero-inner { max-width: 680px; }
 .eyebrow {
-  font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.18em;
-  color: var(--sand); margin-bottom: 0.85rem; font-weight: 500;
+  font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em;
+  color: var(--sand); margin-bottom: 1rem; font-weight: 500;
 }
 .hero h1 {
-  font-size: clamp(2.6rem, 8vw, 4rem); line-height: 1.08;
-  margin-bottom: 1rem; font-weight: 400;
+  font-size: clamp(2.75rem, 9vw, 4.35rem); line-height: 1.05;
+  margin-bottom: 1.1rem; font-weight: 400;
 }
 .hero h1 em { font-style: italic; color: var(--sand); }
-.hero-lead { font-size: 1.05rem; opacity: 0.92; max-width: 32em; font-weight: 300; }
-.ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
+.hero-lead { font-size: 1.08rem; opacity: 0.92; max-width: 34em; font-weight: 300; line-height: 1.7; }
+.ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.85rem; }
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
-  padding: 0.9rem 1.4rem; border-radius: 2px; text-decoration: none;
+  padding: 0.95rem 1.45rem; border-radius: 2px; text-decoration: none;
   font-size: 0.9rem; font-weight: 500; letter-spacing: 0.02em;
   border: 1.5px solid transparent; transition: filter 0.15s, background 0.15s;
 }
 .btn-wa { background: var(--wa); color: #06280f; }
 .btn-wa:hover { filter: brightness(1.06); }
-.btn-call { background: transparent; color: var(--cream); border-color: rgba(245,235,224,0.55); }
+.btn-call { background: transparent; color: var(--cream); border-color: rgba(245,235,224,0.5); }
 .btn-call:hover { background: rgba(255,255,255,0.08); }
 .btn-solid { background: var(--terracotta); color: #fff; }
 .btn-solid:hover { background: var(--terracotta-deep); }
 .btn-outline-dark { background: transparent; color: var(--brown); border-color: var(--brown-soft); }
 .btn-outline-dark:hover { background: var(--sand-light); }
 
-.section { padding: 4.5rem 1.25rem; max-width: 1100px; margin: 0 auto; }
-.section-narrow { max-width: 720px; }
+.section { padding: 5rem 1.25rem; max-width: 1120px; margin: 0 auto; }
 .section-label {
-  font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.16em;
-  color: var(--terracotta); font-weight: 600; margin-bottom: 0.6rem;
+  font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--terracotta); font-weight: 600; margin-bottom: 0.65rem;
 }
 .section h2 {
-  font-size: clamp(2rem, 5vw, 2.85rem); line-height: 1.15; margin-bottom: 1rem; color: var(--brown);
+  font-size: clamp(2.1rem, 5.2vw, 3rem); line-height: 1.12; margin-bottom: 1rem; color: var(--brown);
 }
-.section .lede { color: var(--muted); font-size: 1.05rem; max-width: 36em; margin-bottom: 2rem; }
+.section .lede { color: var(--muted); font-size: 1.05rem; max-width: 38em; margin-bottom: 2.25rem; font-weight: 300; }
 
-.why-grid {
-  display: grid; gap: 1.5rem;
-}
+.why-grid { display: grid; gap: 0; }
 .why-item {
-  display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start;
-  padding: 1.5rem 0; border-top: 1px solid var(--sand);
+  display: grid; grid-template-columns: auto 1fr; gap: 1.1rem; align-items: start;
+  padding: 1.65rem 0; border-top: 1px solid var(--sand);
 }
+.why-item:last-child { border-bottom: 1px solid var(--sand); }
 .why-num {
-  font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; color: var(--terracotta);
-  line-height: 1; min-width: 2rem;
+  font-family: 'Cormorant Garamond', serif; font-size: 1.85rem; color: var(--terracotta);
+  line-height: 1; min-width: 2.1rem;
 }
-.why-item h3 { font-size: 1.45rem; margin-bottom: 0.35rem; }
+.why-item h3 { font-size: 1.5rem; margin-bottom: 0.4rem; }
 .why-item p { color: var(--muted); font-size: 0.95rem; }
 
 .rooms {
   background: var(--sand-light);
-  padding: 4.5rem 1.25rem;
+  padding: 5rem 1.25rem;
 }
-.rooms-inner { max-width: 1100px; margin: 0 auto; }
+.rooms-inner { max-width: 1120px; margin: 0 auto; }
 .rooms-layout {
-  display: grid; gap: 2rem; margin-top: 2rem;
+  display: grid; gap: 1.5rem; margin-top: 2.25rem;
 }
 .room-card {
   background: var(--cream); overflow: hidden;
+  box-shadow: 0 1px 0 rgba(44,24,16,0.04);
 }
 .room-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
-.room-card-body { padding: 1.5rem 1.35rem 1.75rem; }
-.room-card h3 { font-size: 1.55rem; margin-bottom: 0.5rem; }
-.room-card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 0.75rem; }
+.room-card-body { padding: 1.6rem 1.4rem 1.85rem; }
+.room-card h3 { font-size: 1.6rem; margin-bottom: 0.5rem; }
+.room-card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 0.85rem; }
 .amenity-list {
-  list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem;
+  list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 1rem;
   font-size: 0.8rem; color: var(--brown-soft); font-weight: 500;
 }
 .amenity-list li::before { content: "· "; color: var(--terracotta); }
 
-.experiences { padding: 4.5rem 1.25rem; max-width: 1100px; margin: 0 auto; }
-.exp-stack { display: grid; gap: 2.5rem; margin-top: 2rem; }
+.experiences { padding: 5rem 1.25rem; max-width: 1120px; margin: 0 auto; }
+.exp-stack { display: grid; gap: 3rem; margin-top: 2.25rem; }
 .exp-row {
-  display: grid; gap: 1.25rem; align-items: center;
+  display: grid; gap: 1.35rem; align-items: center;
 }
 .exp-row img { width: 100%; aspect-ratio: 16/10; object-fit: cover; }
-.exp-row h3 { font-size: 1.7rem; margin-bottom: 0.5rem; }
-.exp-row p { color: var(--muted); }
+.exp-row h3 { font-size: 1.8rem; margin-bottom: 0.55rem; }
+.exp-row p { color: var(--muted); font-weight: 300; }
 
-.gallery-wrap { background: var(--brown); color: var(--cream); padding: 4.5rem 1.25rem; }
-.gallery-inner { max-width: 1100px; margin: 0 auto; }
+.gallery-wrap { background: var(--brown); color: var(--cream); padding: 5rem 1.25rem; }
+.gallery-inner { max-width: 1120px; margin: 0 auto; }
 .gallery-wrap .section-label { color: var(--sand); }
 .gallery-wrap h2 { color: var(--cream); }
+.gallery-wrap .lede { color: rgba(250,246,240,0.7); }
 .masonry {
-  columns: 1; column-gap: 0.85rem; margin-top: 2rem;
+  columns: 1; column-gap: 0.9rem; margin-top: 2.25rem;
 }
 .masonry figure {
-  break-inside: avoid; margin-bottom: 0.85rem; position: relative; overflow: hidden;
+  break-inside: avoid; margin-bottom: 0.9rem; position: relative; overflow: hidden;
 }
-.masonry img { width: 100%; cursor: pointer; transition: transform 0.4s ease; }
-.masonry figure:hover img { transform: scale(1.03); }
+.masonry img { width: 100%; cursor: pointer; transition: transform 0.45s ease; }
+.masonry figure:hover img { transform: scale(1.035); }
 .masonry figcaption {
   position: absolute; bottom: 0; left: 0; right: 0;
-  padding: 1.5rem 0.85rem 0.65rem;
-  background: linear-gradient(transparent, rgba(0,0,0,0.65));
-  font-size: 0.75rem; letter-spacing: 0.04em; opacity: 0.9;
+  padding: 1.6rem 0.9rem 0.7rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.92;
 }
 
 .location {
-  padding: 4.5rem 1.25rem; max-width: 1100px; margin: 0 auto;
+  padding: 5rem 1.25rem; max-width: 1120px; margin: 0 auto;
   display: grid; gap: 2rem;
 }
+.loc-visual { overflow: hidden; }
+.loc-visual img { width: 100%; aspect-ratio: 5/4; object-fit: cover; }
 .loc-card {
-  background: linear-gradient(135deg, var(--sand-light), var(--sand));
-  padding: 2rem 1.5rem; border-left: 3px solid var(--terracotta);
+  background: linear-gradient(145deg, var(--sand-light), var(--sand));
+  padding: 2.1rem 1.6rem; border-left: 3px solid var(--terracotta);
 }
-.loc-card h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.loc-card h3 { font-size: 1.55rem; margin-bottom: 0.55rem; }
 .loc-card p { color: var(--muted); }
 
 .booking {
-  background: var(--sand-light); padding: 4.5rem 1.25rem;
+  background: var(--sand-light); padding: 5rem 1.25rem;
 }
-.booking-inner { max-width: 900px; margin: 0 auto; }
+.booking-inner { max-width: 920px; margin: 0 auto; }
 .steps {
-  display: grid; gap: 1.25rem; margin-top: 2rem; counter-reset: step;
+  display: grid; gap: 1.25rem; margin-top: 2.25rem;
 }
 .step {
-  background: var(--cream); padding: 1.5rem 1.35rem;
-  display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start;
+  background: var(--cream); padding: 1.6rem 1.4rem;
+  display: grid; grid-template-columns: auto 1fr; gap: 1.1rem; align-items: start;
 }
 .step-num {
-  width: 2.5rem; height: 2.5rem; border-radius: 50%;
+  width: 2.55rem; height: 2.55rem; border-radius: 50%;
   background: var(--terracotta); color: #fff;
   display: flex; align-items: center; justify-content: center;
   font-weight: 600; font-size: 0.95rem;
 }
-.step h3 { font-size: 1.35rem; margin-bottom: 0.3rem; }
+.step h3 { font-size: 1.4rem; margin-bottom: 0.35rem; }
 .step p { color: var(--muted); font-size: 0.95rem; }
 
-.faq { padding: 4.5rem 1.25rem; max-width: 720px; margin: 0 auto; }
+.faq { padding: 5rem 1.25rem; max-width: 720px; margin: 0 auto; }
 details {
-  border-bottom: 1px solid var(--sand); padding: 1.1rem 0;
+  border-bottom: 1px solid var(--sand); padding: 1.15rem 0;
 }
 details summary {
-  cursor: pointer; font-weight: 500; font-size: 1rem;
+  cursor: pointer; font-weight: 500; font-size: 1.02rem;
   list-style: none; display: flex; justify-content: space-between; gap: 1rem;
 }
 details summary::-webkit-details-marker { display: none; }
-details summary::after { content: "+"; color: var(--terracotta); font-size: 1.2rem; font-weight: 300; }
+details summary::after { content: "+"; color: var(--terracotta); font-size: 1.25rem; font-weight: 300; }
 details[open] summary::after { content: "−"; }
-details p { color: var(--muted); margin-top: 0.75rem; font-size: 0.95rem; padding-right: 1.5rem; }
+details p { color: var(--muted); margin-top: 0.8rem; font-size: 0.95rem; padding-right: 1.5rem; font-weight: 300; }
 
 .final-cta {
   background:
-    linear-gradient(180deg, rgba(44,24,16,0.75), rgba(44,24,16,0.9)),
-    url('images/06-grounds.jpg') center/cover;
+    linear-gradient(180deg, rgba(26,15,10,0.72), rgba(26,15,10,0.9)),
+    url('images-ig/02.jpg') center/cover;
   color: var(--cream); text-align: center;
-  padding: 5rem 1.25rem;
+  padding: 5.5rem 1.25rem;
 }
-.final-cta h2 { font-size: clamp(2rem, 5vw, 2.75rem); margin-bottom: 0.75rem; color: var(--cream); }
-.final-cta p { opacity: 0.9; max-width: 28em; margin: 0 auto 1.75rem; }
+.final-cta h2 { font-size: clamp(2.1rem, 5vw, 2.9rem); margin-bottom: 0.8rem; color: var(--cream); }
+.final-cta p { opacity: 0.9; max-width: 30em; margin: 0 auto 1.85rem; font-weight: 300; }
 .final-cta .ctas { justify-content: center; }
 
 footer {
-  background: var(--brown); color: var(--sand); padding: 2rem 1.25rem; text-align: center;
+  background: var(--brown); color: var(--sand); padding: 2.5rem 1.25rem; text-align: center;
   font-size: 0.8rem;
 }
-footer a { color: var(--cream); }
-.footer-name { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--cream); margin-bottom: 0.5rem; }
+footer a { color: var(--cream); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+.footer-name { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; color: var(--cream); margin-bottom: 0.4rem; }
+.footer-domain { letter-spacing: 0.08em; font-size: 0.75rem; opacity: 0.75; margin-bottom: 0.85rem; }
 
 .wa-bar {
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
   background: var(--brown); padding: 0.65rem 1rem;
-  display: flex; gap: 0.6rem; box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+  display: flex; gap: 0.6rem; box-shadow: 0 -4px 24px rgba(0,0,0,0.25);
 }
-.wa-bar .btn { flex: 1; padding: 0.75rem; font-size: 0.85rem; border-radius: 4px; }
+.wa-bar .btn { flex: 1; padding: 0.8rem; font-size: 0.85rem; border-radius: 4px; }
 .wa-bar .btn-call { border-color: rgba(232,213,181,0.4); color: var(--sand); }
 
 .lightbox {
   display: none; position: fixed; inset: 0; z-index: 200;
-  background: rgba(0,0,0,0.92); align-items: center; justify-content: center; padding: 1rem;
+  background: rgba(0,0,0,0.93); align-items: center; justify-content: center; padding: 1rem;
 }
 .lightbox.open { display: flex; }
 .lightbox img { max-height: 90vh; max-width: 100%; object-fit: contain; }
@@ -257,18 +267,19 @@ footer a { color: var(--cream); }
 @media (min-width: 640px) {
   .masonry { columns: 2; }
   .rooms-layout { grid-template-columns: 1fr 1fr; }
-  .exp-row { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .exp-row { grid-template-columns: 1.05fr 1fr; gap: 2.25rem; }
   .exp-row:nth-child(even) img { order: 2; }
-  .location { grid-template-columns: 1.2fr 1fr; align-items: center; }
+  .location { grid-template-columns: 1.15fr 1fr; align-items: center; }
   .steps { grid-template-columns: repeat(3, 1fr); }
   .step { grid-template-columns: 1fr; text-align: center; }
-  .step-num { margin: 0 auto 0.75rem; }
+  .step-num { margin: 0 auto 0.85rem; }
 }
 @media (min-width: 900px) {
   .nav-links { display: flex; }
   .nav-toggle { display: none; }
   .masonry { columns: 3; }
-  .why-grid { grid-template-columns: 1fr 1fr; gap: 0 2rem; }
+  .why-grid { grid-template-columns: 1fr 1fr; gap: 0 2.5rem; }
+  .why-item:nth-child(1), .why-item:nth-child(2) { border-top: 1px solid var(--sand); }
   .wa-bar { display: none; }
   body { padding-bottom: 0; }
 }
@@ -278,7 +289,7 @@ footer a { color: var(--cream); }
 <div class="demo-banner">Demo preview · prepared for Al Hawiyah Camp · not the live site yet</div>
 
 <header class="nav">
-  <div class="nav-brand">Al Hawiyah Camp</div>
+  <a class="nav-brand" href="#">Al Hawiyah Camp<span>alhawiyahcamp.com</span></a>
   <nav class="nav-links">
     <a href="#why">Why stay</a>
     <a href="#rooms">Rooms</a>
@@ -293,14 +304,16 @@ footer a { color: var(--cream); }
   <a href="#rooms" onclick="this.parentElement.classList.remove('open')">Rooms</a>
   <a href="#experiences" onclick="this.parentElement.classList.remove('open')">Experiences</a>
   <a href="#gallery" onclick="this.parentElement.classList.remove('open')">Gallery</a>
+  <a href="#location" onclick="this.parentElement.classList.remove('open')">Location</a>
   <a href="#book" onclick="this.parentElement.classList.remove('open')">Book</a>
+  <a href="#faq" onclick="this.parentElement.classList.remove('open')">FAQ</a>
 </nav>
 
 <section class="hero">
   <div class="hero-inner">
     <p class="eyebrow">Bidiyah · Wahiba Sands · Oman</p>
-    <h1>Where the dunes<br><em>slow time</em></h1>
-    <p class="hero-lead">A quiet desert lodge on Bidiyah Camps Road — air-conditioned rooms with private bathrooms and balconies, warm meals, and Wahiba Sands just beyond the gates.</p>
+    <h1>Lit lodges<br>under <em>desert sky</em></h1>
+    <p class="hero-lead">Standalone chalets glow against the dunes at night — a quiet desert lodge on Bidiyah Camps Road, where Wahiba evenings slow the day and hospitality still feels personal.</p>
     <div class="ctas">
       <a class="btn btn-wa" href="https://wa.me/96897777486" target="_blank" rel="noopener">WhatsApp to enquire</a>
       <a class="btn btn-call" href="tel:+96897777486">Call +968 9777 7486</a>
@@ -310,35 +323,35 @@ footer a { color: var(--cream); }
 
 <section class="section" id="why">
   <p class="section-label">Why stay here</p>
-  <h2>Desert lodge comfort,<br>without the noise</h2>
-  <p class="lede">Al Hawiyah sits where Bidiyah meets the Wahiba — close enough for golden-hour dune walks, far enough that evenings feel still. This is a place to sleep well, eat simply, and wake to sand-coloured light.</p>
+  <h2>Desert lodge calm,<br>without the noise</h2>
+  <p class="lede">Al Hawiyah sits where Bidiyah meets Wahiba — close enough for golden dunes, far enough that nights feel still. Sleep in your own chalet, gather by the fire, and wake to sand-coloured light.</p>
   <div class="why-grid">
     <div class="why-item">
       <span class="why-num">01</span>
       <div>
-        <h3>Cool rooms after hot days</h3>
-        <p>Air-conditioned rooms with private bathrooms and balconies — the kind of comfort you notice when the afternoon heat has been generous.</p>
+        <h3>Your own lit chalet</h3>
+        <p>Private standalone lodges with warm exterior light and traditional crenelated lines — a small house of your own after a day in the sand.</p>
       </div>
     </div>
     <div class="why-item">
       <span class="why-num">02</span>
       <div>
-        <h3>Breakfast included</h3>
-        <p>Start with a complimentary breakfast before dunes, Bidaya Museum, or a slow morning on the balcony with coffee and soft light.</p>
+        <h3>Campfire evenings</h3>
+        <p>Guests gather on the sand around the fire — conversation, stars, and the hush that arrives when the wind drops over Wahiba.</p>
       </div>
     </div>
     <div class="why-item">
       <span class="why-num">03</span>
       <div>
         <h3>Wahiba on your doorstep</h3>
-        <p>Wahiba Sands is the draw — rolling dunes for sunrise and sunset. Ask us how to time a short trip or a longer desert day.</p>
+        <p>Rolling dunes frame the camp. Ask us how to time a sunrise walk, a dune drive, or a slow afternoon under a traditional tent.</p>
       </div>
     </div>
     <div class="why-item">
       <span class="why-num">04</span>
       <div>
-        <h3>Easy parking &amp; arrival</h3>
-        <p>Free parking on site. Message us your arrival window and we will help you find Bidiyah Camps Road without the last-mile guesswork.</p>
+        <h3>Easy arrival</h3>
+        <p>Message your ETA on WhatsApp and we will help you find Bidiyah Camps Road — so the last mile feels simple, not uncertain.</p>
       </div>
     </div>
   </div>
@@ -347,54 +360,30 @@ footer a { color: var(--cream); }
 <section class="rooms" id="rooms">
   <div class="rooms-inner">
     <p class="section-label">Rooms &amp; comfort</p>
-    <h2>Rest well between dune days</h2>
-    <p class="lede">Simple, well-kept rooms designed for desert travellers — cool air, a private bathroom, and a balcony for the evening breeze.</p>
+    <h2>Chalets that glow after dark</h2>
+    <p class="lede">Low-rise lodges spaced across the sand — private, lit, and ready when the desert evening turns cool. Ask on WhatsApp what is available for your dates.</p>
     <div class="rooms-layout">
       <article class="room-card">
-        <img src="images/02-room.jpg" alt="Air-conditioned guest room at Al Hawiyah Camp" loading="lazy">
+        <img src="images-ig/04.jpg" alt="Lit guest chalet with arched doorway at Al Hawiyah Camp" loading="lazy">
         <div class="room-card-body">
-          <h3>Guest rooms</h3>
-          <p>Calm interiors with air conditioning — a cool retreat after dunes, drives, and long desert light.</p>
+          <h3>Private chalets</h3>
+          <p>A single lodge lit against the dunes — arched doorway, warm wall lights, and your own quiet corner of the camp.</p>
           <ul class="amenity-list">
-            <li>Air conditioning</li>
-            <li>Comfortable bedding</li>
-            <li>Quiet setting</li>
+            <li>Standalone unit</li>
+            <li>Night lighting</li>
+            <li>Desert setting</li>
           </ul>
         </div>
       </article>
       <article class="room-card">
-        <img src="images/03-bathroom.jpg" alt="Private bathroom" loading="lazy">
+        <img src="images-ig/02.jpg" alt="Cluster of lit desert lodges at night" loading="lazy">
         <div class="room-card-body">
-          <h3>Private bathrooms</h3>
-          <p>Each room has its own bathroom — clean, practical, and ready after a day in the sand.</p>
+          <h3>Camp of lodges</h3>
+          <p>Several chalets glow across the sand after dark — space between units, soft amber light, and Wahiba hills on the horizon.</p>
           <ul class="amenity-list">
-            <li>En-suite</li>
-            <li>Hot water</li>
-            <li>Daily essentials</li>
-          </ul>
-        </div>
-      </article>
-      <article class="room-card">
-        <img src="images/04-balcony.jpg" alt="Room balcony overlooking the grounds" loading="lazy">
-        <div class="room-card-body">
-          <h3>Balconies</h3>
-          <p>Step outside for evening air and soft desert colour — a small ritual before dinner or sleep.</p>
-          <ul class="amenity-list">
-            <li>Private outdoor space</li>
-            <li>Evening breeze</li>
-            <li>Quiet views</li>
-          </ul>
-        </div>
-      </article>
-      <article class="room-card">
-        <img src="images/05-dining.jpg" alt="Dining area at the camp" loading="lazy">
-        <div class="room-card-body">
-          <h3>Shared dining</h3>
-          <p>Meals and breakfast in a welcoming dining space — ask on WhatsApp what is served during your stay dates.</p>
-          <ul class="amenity-list">
-            <li>Breakfast included</li>
-            <li>Communal tables</li>
-            <li>Ask for dinner options</li>
+            <li>Spaced for privacy</li>
+            <li>Warm exteriors</li>
+            <li>Dune backdrop</li>
           </ul>
         </div>
       </article>
@@ -404,28 +393,28 @@ footer a { color: var(--cream); }
 
 <section class="experiences" id="experiences">
   <p class="section-label">Desert experiences</p>
-  <h2>Dunes, sunrise, camp life</h2>
-  <p class="lede">The lodge is your base. The desert is the reason you came. We help you shape the day — or leave space for nothing at all.</p>
+  <h2>Fire, tent, and soft mornings</h2>
+  <p class="lede">The lodge is your base. The desert is why you came. Shape the day with us — or leave room for nothing at all.</p>
   <div class="exp-stack">
     <div class="exp-row">
-      <img src="images/06-grounds.jpg" alt="Camp grounds with desert surroundings" loading="lazy">
+      <img src="images-ig/03.jpg" alt="Guests gathered around a campfire at night" loading="lazy">
       <div>
-        <h3>Wahiba dune time</h3>
-        <p>Golden ridges, soft light, and the hush that arrives when the wind drops. Ask us about sunrise or late-afternoon dune walks and how to reach the best nearby sand without rush.</p>
+        <h3>Around the fire</h3>
+        <p>Sit in a circle on the sand as the fire burns bright and the cabins glow behind you. A simple desert evening — shared light, open sky, and the quiet of Bidiyah after dark.</p>
       </div>
     </div>
     <div class="exp-row">
-      <img src="images/01-exterior.jpg" alt="Al Hawiyah Camp exterior" loading="lazy">
+      <img src="images-ig/05.jpg" alt="Traditional tent against a Wahiba sand dune at twilight" loading="lazy">
       <div>
-        <h3>Sunrise &amp; soft evenings</h3>
-        <p>Mornings here start pale and warm; evenings settle into terracotta and shadow. Bring a light layer, leave the city noise behind, and let the sky do the talking.</p>
+        <h3>Tent under the dune</h3>
+        <p>A traditional open tent faces a rising wall of sand — torches in the ground, soft twilight, and the kind of shade that belongs to desert hospitality.</p>
       </div>
     </div>
     <div class="exp-row">
-      <img src="images/05-dining.jpg" alt="Shared dining and camp hospitality" loading="lazy">
+      <img src="images-ig/07.jpg" alt="Coffee served with desert ATV in the background" loading="lazy">
       <div>
-        <h3>Camp life, unhurried</h3>
-        <p>Balcony coffee, a shared meal, a quiet night under clearer stars than the coast. This is not a resort schedule — it is space to recover between Oman’s roads and dunes.</p>
+        <h3>Pause between adventures</h3>
+        <p>Coffee after the dunes, a moment on the ledge before the next run. Ask us about timing dune trips and how guests usually mix rest with Wahiba days.</p>
       </div>
     </div>
   </div>
@@ -435,28 +424,33 @@ footer a { color: var(--cream); }
   <div class="gallery-inner">
     <p class="section-label">Gallery</p>
     <h2>A sense of place</h2>
+    <p class="lede">Photos from the camp’s Instagram — lodges at night, fire circles, tents, and the dunes that frame Bidiyah.</p>
     <div class="masonry">
-      <figure><img src="images/01-exterior.jpg" alt="Camp exterior" data-full="images/01-exterior.jpg" onclick="openLb(this)"><figcaption>Exterior</figcaption></figure>
-      <figure><img src="images/02-room.jpg" alt="Guest room" data-full="images/02-room.jpg" onclick="openLb(this)"><figcaption>Room</figcaption></figure>
-      <figure><img src="images/04-balcony.jpg" alt="Balcony" data-full="images/04-balcony.jpg" onclick="openLb(this)"><figcaption>Balcony</figcaption></figure>
-      <figure><img src="images/03-bathroom.jpg" alt="Bathroom" data-full="images/03-bathroom.jpg" onclick="openLb(this)"><figcaption>Bathroom</figcaption></figure>
-      <figure><img src="images/05-dining.jpg" alt="Dining" data-full="images/05-dining.jpg" onclick="openLb(this)"><figcaption>Dining</figcaption></figure>
-      <figure><img src="images/06-grounds.jpg" alt="Grounds" data-full="images/06-grounds.jpg" onclick="openLb(this)"><figcaption>Grounds</figcaption></figure>
+      <figure><img src="images-ig/01.jpg" alt="Three lit lodges at night" data-full="images-ig/01.jpg" onclick="openLb(this)"><figcaption>Night lodges</figcaption></figure>
+      <figure><img src="images-ig/02.jpg" alt="Camp lodges glowing at twilight" data-full="images-ig/02.jpg" onclick="openLb(this)"><figcaption>Camp at dusk</figcaption></figure>
+      <figure><img src="images-ig/03.jpg" alt="Campfire gathering" data-full="images-ig/03.jpg" onclick="openLb(this)"><figcaption>Campfire</figcaption></figure>
+      <figure><img src="images-ig/04.jpg" alt="Single lit chalet" data-full="images-ig/04.jpg" onclick="openLb(this)"><figcaption>Chalet</figcaption></figure>
+      <figure><img src="images-ig/05.jpg" alt="Traditional tent and dune" data-full="images-ig/05.jpg" onclick="openLb(this)"><figcaption>Desert tent</figcaption></figure>
+      <figure><img src="images-ig/06.jpg" alt="Daytime view of camp among dunes" data-full="images-ig/06.jpg" onclick="openLb(this)"><figcaption>Among the dunes</figcaption></figure>
+      <figure><img src="images-ig/07.jpg" alt="Coffee and desert lifestyle" data-full="images-ig/07.jpg" onclick="openLb(this)"><figcaption>Desert pause</figcaption></figure>
     </div>
   </div>
 </section>
 
 <section class="location" id="location">
+  <div class="loc-visual">
+    <img src="images-ig/06.jpg" alt="Al Hawiyah Camp chalets among Wahiba dunes by day" loading="lazy">
+  </div>
   <div>
     <p class="section-label">Location</p>
     <h2>Bidiyah · edge of Wahiba</h2>
-    <p class="lede" style="margin-bottom:0">On Bidiyah Camps Road, near the gateway to Wahiba Sands. A practical base for dune mornings, Bidaya Museum, and the long quiet of eastern Oman’s desert fringe.</p>
-  </div>
-  <div class="loc-card">
-    <h3>Getting here</h3>
-    <p>Self-drive is common; parking is free on site. Share your route or ETA on WhatsApp and we will help with the final approach so you arrive without circling.</p>
-    <div class="ctas" style="margin-top:1.25rem">
-      <a class="btn btn-solid" href="https://wa.me/96897777486?text=Hi%20Al%20Hawiyah%20Camp%20—%20I%27d%20like%20directions%20/%20to%20enquire%20about%20a%20stay" target="_blank" rel="noopener">Ask for directions</a>
+    <p class="lede" style="margin-bottom:1.5rem">On Bidiyah Camps Road, near the gateway to Wahiba Sands. A practical base for dune mornings and the long quiet of eastern Oman’s desert fringe.</p>
+    <div class="loc-card">
+      <h3>Getting here</h3>
+      <p>Self-drive is common. Share your route or ETA on WhatsApp and we will help with the final approach so you arrive without circling.</p>
+      <div class="ctas" style="margin-top:1.25rem">
+        <a class="btn btn-solid" href="https://wa.me/96897777486?text=Hi%20Al%20Hawiyah%20Camp%20—%20I%27d%20like%20directions%20/%20to%20enquire%20about%20a%20stay" target="_blank" rel="noopener">Ask for directions</a>
+      </div>
     </div>
   </div>
 </section>
@@ -485,11 +479,11 @@ footer a { color: var(--cream); }
         <div class="step-num">3</div>
         <div>
           <h3>Arrive &amp; unwind</h3>
-          <p>Share your ETA, park on site, and settle into cool rooms and desert evenings.</p>
+          <p>Share your ETA, settle into your chalet, and let the desert evening take over.</p>
         </div>
       </div>
     </div>
-    <div class="ctas" style="margin-top:2rem;justify-content:center">
+    <div class="ctas" style="margin-top:2.25rem;justify-content:center">
       <a class="btn btn-wa" href="https://wa.me/96897777486" target="_blank" rel="noopener">WhatsApp to book</a>
       <a class="btn btn-outline-dark" href="tel:+96897777486">Call +968 9777 7486</a>
     </div>
@@ -504,8 +498,8 @@ footer a { color: var(--cream); }
     <p>On Bidiyah Camps Road near Wahiba Sands in the Bidiyah / Bidiya area of Sharqiyah. Message us for a pin and arrival tips for your vehicle type.</p>
   </details>
   <details>
-    <summary>What’s included?</summary>
-    <p>Public listings note air-conditioned rooms with private bathrooms and balconies, complimentary breakfast, and free parking. Confirm inclusions for your dates on WhatsApp.</p>
+    <summary>What kind of accommodation is it?</summary>
+    <p>Standalone desert chalets / lodges set on the sand, with traditional crenelated rooftops and warm exterior lighting. Confirm room type and inclusions for your dates on WhatsApp.</p>
   </details>
   <details>
     <summary>Can you help with dune trips?</summary>
@@ -516,8 +510,8 @@ footer a { color: var(--cream); }
     <p>Message or call us with your dates. We prefer to quote on WhatsApp so we can match room type, season, and group size accurately.</p>
   </details>
   <details>
-    <summary>Is it suitable for families?</summary>
-    <p>Many travellers stay as couples or small groups. Tell us ages and room needs when you enquire and we will advise what works best.</p>
+    <summary>Is it suitable for families or small groups?</summary>
+    <p>Travellers stay as couples and small groups. Tell us ages and room needs when you enquire and we will advise what works best.</p>
   </details>
 </section>
 
@@ -532,9 +526,10 @@ footer a { color: var(--cream); }
 
 <footer>
   <p class="footer-name">Al Hawiyah Camp</p>
+  <p class="footer-domain">alhawiyahcamp.com</p>
   <p>Bidiyah · Wahiba Sands · Oman</p>
-  <p style="margin-top:0.75rem"><a href="https://wa.me/96897777486">WhatsApp</a> · <a href="tel:+96897777486">+968 9777 7486</a></p>
-  <p style="margin-top:1rem;opacity:0.65;font-size:0.7rem">Demo preview — not the live website</p>
+  <p style="margin-top:0.85rem"><a href="https://wa.me/96897777486">WhatsApp</a> · <a href="tel:+96897777486">+968 9777 7486</a></p>
+  <p style="margin-top:1.1rem;opacity:0.65;font-size:0.7rem">Demo preview — not the live website</p>
 </footer>
 
 <div class="wa-bar" aria-label="Quick contact">
